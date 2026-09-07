@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Billing System</title>
+
+    <link rel="stylesheet" href="billing.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🧾 Billing System</h1>
+
+        <div class="form-box">
+
+            <input
+                type="text"
+                id="productName"
+                placeholder="Enter Product Name"
+            >
+
+            <input
+                type="number"
+                id="productPrice"
+                placeholder="Enter Price"
+                min="0"
+            >
+
+            <input
+                type="number"
+                id="productQuantity"
+                placeholder="Enter Quantity"
+                min="1"
+            >
+
+            <button id="addBtn">Add Product</button>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="productTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="summary">
+
+            <h2>Bill Summary</h2>
+
+            <p>
+                <span>Total Bill:</span>
+                <span id="totalBill">0.00</span>
+            </p>
+
+            <p>
+                <span>Discount (10%):</span>
+                <span id="discount">0.00</span>
+            </p>
+
+            <h3>
+                <span>Final Bill:</span>
+                <span id="finalBill">0.00</span>
+            </h3>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <button id="clearBtn" class="clear-btn">
+                Clear Bill
+            </button>
+
+            <button id="printBtn" class="print-btn">
+                Print Bill
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="billing.js"></script>
+
+</body>
+
+</html>
